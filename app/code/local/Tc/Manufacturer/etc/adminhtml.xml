@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <manufacturer module="manufacturer" translate="title">
+            <title>Manufacturer</title>
+            <sort_order>71</sort_order>
+            <children>
+                <manufacturer module="manufacturer" translate="title">
+                    <title>Manage Items</title>
+                    <sort_order>0</sort_order>
+                    <action>
+                        manufactureradmin/adminhtml_manufacturer
+                    </action>
+                </manufacturer>
+                <settings module="manufacturer" translate="title">
+                    <title>Settings</title>
+                    <sort_order>1000</sort_order>
+                    <action>adminhtml/system_config/edit/section/manufacturer</action>
+                </settings>
+            </children>
+        </manufacturer>
+    </menu>
+</config>

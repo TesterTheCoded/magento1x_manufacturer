@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <!-- declare module's version information -->
+        <Tc_Manufacturer>
+            <!-- this version number will be used for database upgrades -->
+            <version>0.1.0</version>
+        </Tc_Manufacturer>
+    </modules>
+    <global>
+        <helpers>
+            <tc_manufacturer>
+                <class>Tc_Manufacturer_Helper</class>
+            </tc_manufacturer>
+        </helpers>
+        <!-- declare model group for new module -->
+        <models>
+            <!-- model group alias to be used in Mage::getModel() -->
+            <manufacturer>
+                <!-- base class name for the model group -->
+                <class>Tc_Manufacturer_Model</class>
+                <resourceModel>tc_manufacturer_resource</resourceModel>
+                <!-- declare model lesson05 work with lesson05 table -->
+                <entities>
+                    <manufacturer>
+                        <table>manufacturer</table>
+                    </manufacturer>
+                </entities>
+            </manufacturer>
+        </models>
+        <!-- declare resource setup for new module -->
+        <resources>
+            <!-- resource identifier -->
+            <manufacturer_setup>
+                <!-- specify that this resource is a setup resource and used for upgrades -->
+                <setup>
+                    <!-- which module to look for install/upgrade files in -->
+                    <module>Tc_Manufacturer</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <!-- specify database connection for this resource -->
+                <connection>
+                    <!-- do not create new connection, use predefined core setup connection -->
+                    <use>core_setup</use>
+                </connection>
+            </manufacturer_setup>
+        </resources>
+    </global>
+</config>
